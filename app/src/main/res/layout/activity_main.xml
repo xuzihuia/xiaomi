@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    tools:context=".ui.MainActivity">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="黄金价格灵动岛"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/gold_primary"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- 当前价格卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/priceCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="@color/card_background"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/titleText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/priceLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/current_price"
+                android:textSize="14sp"
+                android:textColor="@color/gold_primary" />
+
+            <TextView
+                android:id="@+id/currentPriceText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0.00"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/priceChangeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="--"
+                android:textSize="18sp"
+                android:textColor="@color/price_unchanged"
+                android:layout_marginTop="8dp" />
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 更新时间 -->
+    <TextView
+        android:id="@+id/updateTimeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="最后更新：--"
+        android:textSize="12sp"
+        android:textColor="@color/price_unchanged"
+        app:layout_constraintTop_toBottomOf="@id/priceCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 服务控制按钮 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/toggleServiceButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/start_service"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/gold_primary"
+        app:layout_constraintTop_toBottomOf="@id/updateTimeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- 超级岛开关 -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/dynamicIslandSwitch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/enable_island"
+        android:checked="true"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toggleServiceButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- 设置按钮 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/settingsButton"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/settings"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        app:strokeColor="@color/gold_primary"
+        app:layout_constraintTop_toBottomOf="@id/dynamicIslandSwitch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

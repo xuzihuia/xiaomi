@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">黄金灵动岛</string>
+    <string name="settings">设置</string>
+    <string name="current_price">当前价格</string>
+    <string name="price_change">价格变化</string>
+    <string name="last_update">最后更新</string>
+    <string name="update_interval">更新间隔</string>
+    <string name="start_service">启动服务</string>
+    <string name="stop_service">停止服务</string>
+    <string name="service_running">服务运行中</string>
+    <string name="service_stopped">服务已停止</string>
+    <string name="price_up">上涨</string>
+    <string name="price_down">下跌</string>
+    <string name="price_unchanged">持平</string>
+    <string name="channel_id">gold_price_channel</string>
+    <string name="channel_name">黄金价格通知</string>
+    <string name="dynamic_island_channel">gold_island_channel</string>
+    <string name="dynamic_island_name">超级岛通知</string>
+    <string name="notification_title">黄金价格监控</string>
+    <string name="xiaomi_super_island">小米超级岛</string>
+    <string name="enable_island">启用灵动岛</string>
+    <string name="disable_island">禁用灵动岛</string>
+</resources>
